@@ -5,7 +5,7 @@ var app = express.createServer(express.logger());
 var filesys = require('fs');
 
 app.get('/', function(request, response) {
-  filesys.readFileSync(index.html, 'utf-8', function (err, data){
+  filesys.readFileSync("index.html", 'utf-8', function (err, data){
 
     if (err) {
     console.log('Error: ' + err);

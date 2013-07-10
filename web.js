@@ -5,10 +5,9 @@ var app = express.createServer(express.logger());
 var filesys = require('fs');
 var infile = "index.html";
 var buff=filesys.readFileSync(infile);
-console.log(buff.toString());
 
 app.get('/', function(request, response) {
-response.send(buff);
+response.send(buff).toString('utf-8');
 
 });
 var port = process.env.PORT || 5000;

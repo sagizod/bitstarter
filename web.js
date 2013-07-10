@@ -5,7 +5,7 @@ var filesys = require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  ilesys.readFileSync(index.html,function (err, data));
+  filesys.readFileSync(index.html,function (err, data));
   response.send(data.toString("utf-8"));
 });
 

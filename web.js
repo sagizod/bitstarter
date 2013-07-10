@@ -4,20 +4,10 @@ var app = express.createServer(express.logger());
 
 var filesys = require('fs');
 
-var buff;
+var buff=filesys.readFileSync("index.html",'utf-8');
+console.log(buff);
 
 app.get('/', function(request, response) {
-  filesys.readFileSync("index.html", 'utf-8', function (err, data){
-
-    if (err) {
-    console.log('Error: ' + err);
-    return;
-  
-}
-buff=data.toString('utf-8');
-}
-);
-
 response.send(buff);
 
 });

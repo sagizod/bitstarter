@@ -5,8 +5,8 @@ var filesys = require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  filesys.readFileSync(index.html,function (err, data));
-  response.send(data.toString("utf-8"));
+  filesys.readFileSync(index.html,'utf-8',function (err, data));
+  response.send(data);
 });
 
 var port = process.env.PORT || 5000;

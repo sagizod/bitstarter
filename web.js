@@ -5,7 +5,7 @@ var app = express.createServer(express.logger());
 var filesys = require('fs');
 var infile = "index.html";
 var buff=filesys.readFileSync(infile);
-console.log(buff);
+console.log(buff.toString());
 
 app.get('/', function(request, response) {
 response.send(buff);

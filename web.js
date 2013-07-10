@@ -7,7 +7,7 @@ var infile = "index.html";
 var buff=filesys.readFileSync(infile);
 
 app.get('/', function(request, response) {
-response.send(buff).toString('utf-8');
+response.send(buff.toString('utf-8'));
 
 });
 var port = process.env.PORT || 5000;

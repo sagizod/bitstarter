@@ -1,12 +1,12 @@
 var express = require('express');
 
-var filesys = require('fs');
-
 var app = express.createServer(express.logger());
 
+//var filesys = require('fs');
+
 app.get('/', function(request, response) {
-  filesys.readFileSync(index.html,'utf-8',function (err, data));
-  response.send(data);
+//  var buff = filesys.readFileSync("index.html");
+  response.send("buff");
 });
 
 var port = process.env.PORT || 5000;

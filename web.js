@@ -18,7 +18,7 @@ buff=data;
 }
 );
 
-response.send(data);
+response.send(buff);
 
 });
 var port = process.env.PORT || 5000;
